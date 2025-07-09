@@ -56,22 +56,22 @@ const sections = [
 
 export default function CoursePlan() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-2 sm:px-0">
       {/* Header */}
-      <div className="text-center mb-8">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <Target className="h-8 w-8 text-blue-600" />
-          <h2 className="text-3xl font-bold text-gray-900">
+      <div className="text-center mb-6 sm:mb-8">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <Target className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
             Plan du cours
           </h2>
         </div>
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-base sm:text-lg leading-relaxed px-4 sm:px-0">
           Suivez le parcours structuré pour maîtriser les bases de données
         </p>
       </div>
 
       {/* Sections */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {sections.map((section, index) => (
           <SectionBlock
             key={section.href}

@@ -32,29 +32,29 @@ const exerciseButtons = [
 
 export default function ExerciseButtons() {
   return (
-    <div className="max-w-4xl mx-auto mb-12">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+    <div className="max-w-4xl mx-auto mb-8 sm:mb-12 px-2 sm:px-0">
+      <div className="text-center mb-4 sm:mb-6">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
           Accès rapide aux exercices
         </h3>
-        <p className="text-gray-600">
+        <p className="text-sm sm:text-base text-gray-600">
           Choisissez le type d&apos;exercice qui vous convient
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {exerciseButtons.map((button) => {
           const IconComponent = button.icon;
           return (
             <Link
               key={button.href}
               href={button.href}
-              className={`${button.color} ${button.textColor} rounded-xl p-6 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl`}
+              className={`${button.color} ${button.textColor} rounded-xl p-4 sm:p-6 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl`}
             >
               <div className="flex flex-col items-center text-center">
-                <IconComponent className="h-8 w-8 mb-3" />
-                <h4 className="font-bold text-lg mb-2">{button.title}</h4>
-                <p className="text-sm opacity-90">{button.description}</p>
+                <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 mb-2 sm:mb-3" />
+                <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">{button.title}</h4>
+                <p className="text-xs sm:text-sm opacity-90 leading-relaxed">{button.description}</p>
               </div>
             </Link>
           );
